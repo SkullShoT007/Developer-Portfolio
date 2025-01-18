@@ -287,6 +287,10 @@ p {
     display: block;
 }
 
+.section-4{
+    height: 500px;
+}
+
 .options h3:hover,
 .options h3:focus, 
 .options h3:active, 
@@ -348,21 +352,54 @@ p {
     padding-bottom: 2rem;
 }
 
-.skills-img .skill{
-    width: 100px;
-    height: 100px;
+.skills-img .skill img{
+    width: 90px;
+    height: 90px;
 }
+
 
 .skills-img{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin: auto;
+    height: 400px;
     
+}
+
+.skill p{
+    opacity: 0;
+    position: relative;
+    bottom: 4rem;
+    right: 2rem;
+    transition: 0.5s ease;
+    
+}
+
+.skill:nth-child(3) p{
+    position: relative;
+    right: 5rem;
+}
+.skill:nth-child(4) p{
+    position: relative;
+    right: 6rem;
+}
+.skill:nth-child(5) p{
+    position: relative;
+    right: 6rem;
+}
+.skill:nth-child(6) p{
+    position: relative;
+    right: 5rem;
 }
 
 .skills-img img{
     transition: 0.5s ease;
     
+}
+
+.skill:hover  p{
+    opacity: 1;
 }
 
 .section-5
@@ -372,10 +409,13 @@ p {
     flex-direction: column;
     align-items: center;
     color: #D9D9D9;
+    
+    background-image: url("Images/Contact-Background.jpg");
+    background-size: cover;
     height: 50vh;
     width: 100%;
     margin: auto;
-    max-height: 100px;
+    max-height: 200px;
 }
 
 
@@ -390,7 +430,7 @@ p {
 
 
 
-.skills-img img:hover{
+.skill:hover img{
     transform: translateY(-10px);
     transform: translateX(50px);
     rotate: 360deg;
@@ -412,7 +452,7 @@ p {
 .contact-me h1{
     font-size: 30px;
     padding: 2rem;margin: auto;
-    color: #E9464E
+    color: #D9D9D9;
     
     
 }
@@ -439,10 +479,224 @@ p {
     margin: 1rem;
 }
 
-.social-logos img{
+.social-logos img, svg{
     width: 40px;
     height: 40px;
+    transition: 0.2s ease;
 }
+.social-logos svg:hover{
+    
+    fill: #D9D9D9;
+}
+
+/* General small screen adjustments */
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .nav-item {
+        font-size: 0.9rem;
+        margin: 0.5rem;
+    }
+
+    .myinfo {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .about img {
+        display: none;
+    }
+
+    .achievements {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    .section-3 .header h1 {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .project {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .project-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .section-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .section-4 h1 {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    .skills-img {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .skill img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .contact-me input {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .social-logos img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Small Screens (Mobile Phones) */
+@media (max-width: 576px) {
+    .navbar {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    .myinfo {
+        font-size: 1.2rem;
+    }
+
+    .about h1, .about p {
+        font-size: 1.1rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .achievements {
+        margin-top: 1.5rem;
+    }
+
+    .card {
+        width: 95%;
+    }
+
+    .section-3 .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .project {
+        margin-top: 1rem;
+    }
+
+    .skills-img {
+        gap: 0.5rem;
+    }
+
+    .skill img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-me h1 {
+        font-size: 1.2rem;
+    }
+
+    .contact-me input {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .social-logos img {
+        width: 25px;
+        height: 25px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 1rem;
+    }
+}
+
+/* Extra Small Screens (Very Small Phones) */
+@media (max-width: 375px) {
+    .navbar {
+        font-size: 0.7rem;
+    }
+
+    .myinfo {
+        font-size: 1rem;
+    }
+
+    .about h1, .about p {
+        font-size: 1rem;
+    }
+
+    .skills-img {
+        gap: 0.3rem;
+    }
+
+    .skill img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .contact-me input {
+        font-size: 0.8rem;
+        padding: 0.4rem;
+    }
+
+    .social-logos img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

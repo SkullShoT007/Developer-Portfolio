@@ -184,3 +184,16 @@ window.addEventListener('resize', () => {
     section5Camera.updateProjectionMatrix();
     section5Renderer.setSize(window.innerWidth, window.innerHeight);
 });
+
+const optionHeaders = document.querySelectorAll('.options h3');
+
+// Add a click event listener to each <h3> element
+optionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+        // Remove the 'active' class from all <h3> elements
+        optionHeaders.forEach(h3 => h3.classList.remove('active'));
+        
+        // Add the 'active' class to the clicked <h3> element
+        header.classList.add('active');
+    });
+});
