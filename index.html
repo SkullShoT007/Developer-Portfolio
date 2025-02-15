@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class = "hero">
-        <div id="background-canvas"></div> 
+        <!-- <div id="background-canvas"></div>  -->
         <nav>
             <ul  class="navbar"> 
                 <li class="nav-item"><a href="">Home</a></li>
@@ -62,7 +62,7 @@
                     
                     </div>
                     <div class="achimg">
-                        <img src="Images/Freelancer.jpg" alt="">
+                        <img src="Images/video_editor.jpg" alt="">
                     </div>
                 </div>
         </div>
@@ -74,8 +74,8 @@
             <h1> My Projects</h1>
         </div>
         <div class="options">
-            <h3 class="project-type selected-project-type">Dev Projects</h3>
-            <h3 class="project-type2">Video Projects</h3>
+            <h3 class="project-type selected-project-type active" id = "dev" value = 1>Dev Projects</h3>
+            <h3 class="project-type" value = 0 id="video">Video Projects</h3>
         </div>
         <div class="dev-projects">
             <div class="project">
@@ -112,6 +112,44 @@
                 </div>
                 <div class="project-description">
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum recusandae tempore velit et eum facilis itaque, minima, omnis minus vero aut ad nihil ea esse exercitationem similique consectetur dicta! Iure.</p>
+                </div>
+            </div>
+        </div>
+        <div class="vid-projects">
+            <div class="project">
+                <div class="project-image">
+                    <iframe src="https://drive.google.com/file/d/1wJv_G_k9MJLeLWfpKawp-l1gXJk0VF03/preview" allow="autoplay"></iframe>
+                </div>
+                <div class="project-info">
+                    <p class="project-title">Ikigai</p>
+                    <p class="project-date">16 August 2023</p>
+                </div>
+                <div class="project-description">
+                    <p>Ikigai is a Japanese philosophy that represents the intersection of passion, mission, vocation, and profession—your reason for being. It helps you find purpose by aligning what you love, what you’re good at, what the world needs, and what you can be paid for, leading to a fulfilling and meaningful life.</p>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-image">
+                    <iframe src="https://drive.google.com/file/d/1Ii6goBsdFZ8XNCHhM6PYSMoiuhrfFESh/preview" width="640" height="480" allow="autoplay"></iframe>
+                </div>
+                <div class="project-info">
+                    <p class="project-title">Ankit Panth: GGA</p>
+                    <p class="project-date">16 August 2023</p>
+                </div>
+                <div class="project-description">
+                    <p>created a funny video for Ankit Panth for Good Game Asia, likely highlighting his best moments with humor, edits, and witty commentary. It blends gaming action with comedic timing to entertain his audience while showcasing his personality in a lighthearted way.</p>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-image">
+                    <iframe src="https://drive.google.com/file/d/1UnUPsCKfksgF-oOA2ZptN-Pbp28Hde0y/preview" width="640" height="480" allow="autoplay"></iframe>
+                </div>
+                <div class="project-info">
+                    <p class="project-title">Michael Cone</p>
+                    <p class="project-date">16 August 2023</p>
+                </div>
+                <div class="project-description">
+                    <p>Created a Moving head video for Michael Cone where he explained and ranked the best Productivity apps</p>
                 </div>
             </div>
         </div>
@@ -180,7 +218,7 @@
     </div>
     
     
-    <scripts src = "index.js"></script>
+    <script src = "index.js"></script>
     <script type="importmap">
         {
           "imports": {

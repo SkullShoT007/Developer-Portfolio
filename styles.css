@@ -158,7 +158,7 @@ p {
     color: black;
     width: 30rem;
     height: 7rem;
-    border-radius: 1rem;
+    
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -195,7 +195,7 @@ p {
     height: 113px;
     margin-top: 0;
     padding: 0;
-    border-radius: 1rem;
+    
 }
 
 .card p {
@@ -206,6 +206,10 @@ p {
 
 .myself {
     width: 50%;
+}
+
+.myself img{
+    border-radius: 0;
 }
 
 .title h1 {
@@ -234,6 +238,11 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 0;
+}
+
+.achimg img{
+    border-radius: 0;
 }
 
 .description p {
@@ -256,6 +265,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-bottom: 1rem;
     
 }
 
@@ -298,12 +308,66 @@ p {
     color: #E9464E;
 }
 
+.selected-project-type{
+    color: #E9464E;
+}
+
 
 .dev-projects{
+    overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
+    
+    
+}
+.project{
+    opacity: 0;
+    
+}
+
+
+.project:first-child{
+    
+    animation: appear 1s ease-out forwards;
+}
+.project:nth-child(2){
+    
+    animation: appear 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+.project:nth-child(3){
+    
+    animation: appear 1s ease-out forwards;
+    animation-delay: 1s;
+}
+
+
+
+@keyframes appear {
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.vid-projects{
+    overflow: hidden;
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    opacity: 1;
+    animation: appear 1s ease-out;
+    
+}
+
+.vid-projects:focus{
+    animation: appear 1s ease-out;
 }
 
 .project{
@@ -311,21 +375,23 @@ p {
     width: 333px;
     overflow: hidden;
     min-height: 400px;
-    border-radius: 1rem;
-}
-
-
-
-
-.project img{
-    width: 333px;
-    height: 190px;
-    transition: 0.5s;
-    border-radius: 1rem;
     
 }
 
-.project img:hover{
+
+.project-image{
+    overflow: hidden;
+}
+
+.project img, iframe{
+    width: 333px;
+    height: 190px;
+    transition: 1s;
+    
+    
+}
+
+.project img:hover, iframe:hover{
     scale: 1.1;
 }
 
@@ -488,6 +554,8 @@ p {
     
     fill: #D9D9D9;
 }
+
+
 
 /* General small screen adjustments */
 /* Medium Screens (Tablets) */

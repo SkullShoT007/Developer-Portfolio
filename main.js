@@ -102,7 +102,8 @@ animate();
 window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth / 5.5, window.innerHeight / 5.5);
+
 });
 
 // ==========================================
@@ -185,15 +186,20 @@ window.addEventListener('resize', () => {
     section5Renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
-const optionHeaders = document.querySelectorAll('.options h3');
+/* let project_type = document.querySelectorAll('.project-type');
+let id;
+project_type.forEach((type)=>{
+    project_type.addEventListener("click", ()=>{
+        if(project_type.value == 1){
+            id = project_type;
+            project_type.classList.remove('selected-project-type');
 
-// Add a click event listener to each <h3> element
-optionHeaders.forEach(header => {
-    header.addEventListener('click', () => {
-        // Remove the 'active' class from all <h3> elements
-        optionHeaders.forEach(h3 => h3.classList.remove('active'));
-        
-        // Add the 'active' class to the clicked <h3> element
-        header.classList.add('active');
-    });
-});
+        }
+    })
+}); */
+
+
+
+
+
+
